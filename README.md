@@ -8,12 +8,6 @@ Lightweight World of Warcraft addon that captures the player’s currently viewe
 - Hooks directly into Blizzard UI events without extra dependencies.
 - No user configuration or saved variables; the addon is active as soon as the Achievement UI loads.
 
-## Slash Commands
-None — the addon installs hooks automatically when the Blizzard Achievement UI becomes available.
-
-## GUI
-There is no standalone GUI. The addon hooks `AchievementFrame` show/hide scripts and `AchievementFrameCategories_SelectElementData` / `AchievementFrameAchievements_SelectElementData` to cache and reapply selections inside the Blizzard Achievement window.
-
 ## Installation
 1. Copy the `AchievementSessionState` folder into your World of Warcraft `Interface/AddOns/` directory.
 2. Reload the UI (`/reload`) or restart the client.
