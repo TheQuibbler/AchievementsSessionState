@@ -8,13 +8,12 @@
 
 -- Cached values kept up-to-date by hooks so callers can read the selection even when Blizzard getter functions are unavailable or return nil/0.
 local cachedCategoryID
-local cachedAchievementID
 
 -- ==========================================================================
 -- Cache update handlers (hooked to Blizzard UI element selection)
 -- ==========================================================================
 
--- Update cached category selection. When the category changes we clear the cached achievement to avoid carrying a stale achievement id across categories.
+-- Update cached category selection. 
 local function CacheCategorySelection(elementData)
     local newID
     if elementData and elementData.id and elementData.id ~= "summary" then
@@ -24,7 +23,6 @@ local function CacheCategorySelection(elementData)
     end
     if newID and newID ~= cachedCategoryID then
         cachedCategoryID = newID
-        print("AchievementSessionState: cached category updated -> " .. tostring(newID))
     end
 end
 
